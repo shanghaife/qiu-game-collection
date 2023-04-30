@@ -6,7 +6,7 @@
 <meta name="description" content="meta guess color of table ball">
 <meta name="author" content="meta monic(zhaimax)ksharp8@qq.com">
 <style>
-.white_ball {
+#white_ball {
     border:1px solid black;
     border-radius: 50%;
     background: white;
@@ -14,7 +14,7 @@
     width: 88px;
     height: 88px;
 }
-.red_ball {
+#red_ball {
     border:1px solid black;
     border-radius: 50%;
     background: red;
@@ -22,7 +22,7 @@
     width: 88px;
     height: 88px;
 }
-.green_ball {
+#green_ball {
     border:1px solid black;
     border-radius: 50%;
     background: green;
@@ -30,7 +30,7 @@
     width: 88px;
     height: 88px;
 }
-.blue_ball {
+#blue_ball {
     border:1px solid black;
     border-radius: 50%;
     background: blue;
@@ -38,7 +38,7 @@
     width: 88px;
     height: 88px;
 }
-.yellow_ball {
+#yellow_ball {
     border:1px solid black;
     border-radius: 50%;
     background: yellow;
@@ -46,7 +46,7 @@
     width: 88px;
     height: 88px;
 }
-.orange_ball {
+#orange_ball {
     border:1px solid black;
     border-radius: 50%;
     background: orange;
@@ -54,7 +54,7 @@
     width: 88px;
     height: 88px;
 }
-.violet_ball {
+#violet_ball {
     border:1px solid black;
     border-radius: 50%;
     background: violet;
@@ -62,7 +62,7 @@
     width: 88px;
     height: 88px;
 }
-.black_ball {
+#black_ball {
     border:1px solid black;
     border-radius: 50%;
     background: black;
@@ -80,19 +80,53 @@
     font-size: 48px;
     color: gray;
 }
+#c3 {
+    margin-top:68px;
+    font-size: 48px;
+}
+.input1 {
+    text-align: center;
+}
 </style>
 </head>
 <body>
     <div class="titles">八色桌球猜猜猜</div>
     <div class="top_m">
-        <span class="white_ball">1</span>
-        <span class="red_ball">2</span>
-        <span class="green_ball">3</span>
-        <span class="blue_ball">4</span>
-        <span class="yellow_ball">5</span>
-        <span class="orange_ball">6</span>
-        <span class="violet_ball">7</span>
-        <span class="black_ball">8</span>
+        <span id="white_ball" value="1">1</span>
+        <span id="red_ball" value="1">2</span>
+        <span id="green_ball" value="1">3</span>
+        <span id="blue_ball" value="1">4</span>
+        <span id="yellow_ball" value="1">5</span>
+        <span id="orange_ball" value="1">6</span>
+        <span id="violet_ball" value="1">7</span>
+        <span id="black_ball" value="1">8</span>
     </div>
+    <div class="input1"> 
+        <input type="button" value="八选三" id="c3" onclick="change3()">
+    </div>
+<script>
+    function change3(){
+        document.getElementById("white_ball").style.display = "none";
+    }
+
+    var colors = new Array();
+    colors[0] = "white_ball";
+    colors[1] = "red_ball";
+    colors[2] = "green_ball";
+    colors[3] = "blue_ball";
+    colors[4] = "yellow_ball";
+    colors[5] = "orange_ball";
+    colors[6] = "violet_ball";
+    colors[7] = "black_ball";
+
+    var i = 0;
+    while (i<5)
+    {
+        var colorss = colors[Math.ceil(Math.random()*7)];
+        //document.write(colorss);
+        document.write(document.getElementById("colorss").value);
+        i++;
+    }
+</script>
 </body>
 </html>
